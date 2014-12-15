@@ -29,9 +29,9 @@ Picker.router('/post/:_id', function(params, req, res, next) {
 
 ## Filtering and Sub Routes
 
-This is an unique functionality of this routes which does not available in any other NodeJS server side router.
+This is an unique functionality of this router. See following example:
 
-This is how we can use **Picker** to handle `POST` requests.
+Let's say we need to handle only `POST` requests. This is how you can do it with `Picker`.
 
 ~~~js
 var postRoutes = Picker.filter(function(req, res) {

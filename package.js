@@ -1,6 +1,6 @@
 Package.describe({
   "summary": "Server Side Router for Meteor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "git": "https://github.com/meteorhacks/picker.git",
   "name": "meteorhacks:picker"
 });
