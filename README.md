@@ -16,8 +16,6 @@ meteor add meteorhacks:picker
 
 Picker.router('/post/:_id', function(params, req, res, next) {
   var post = Posts.findOne(params._id);
-
-  // req is an instance of NodeJS http.inc
   res.end(post.content);
 });
 
