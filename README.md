@@ -35,9 +35,9 @@ Let's say we need to handle only `POST` requests. This is how you can do it with
 
 ~~~js
 var postRoutes = Picker.filter(function(req, res) {
-  // you can any logic you want.
-  // but this does not runs inside a fiber
-  // at the end you must, return either true or false
+  // you can write any logic you want.
+  // but this callback does not run inside a fiber
+  // at the end, you must return either true or false
   return req.method == "POST";
 });
 
