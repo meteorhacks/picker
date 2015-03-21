@@ -55,12 +55,35 @@ Tinytest.add('middlewares', function(test) {
       next();
     }, 500);
   });
-  
+
   Picker.route(path, function(params, req, res) {
     res.end(req.middlewarePass);
   });
 
   var res = HTTP.get(getPath(path + "?aa=10"));
+  test.equal(res.content, "ok");
+});
+
+Tinytest.add('middlewares - with filtered routes', function(test) {
+  var path = "/" + Random.id() + "/coola";
+
+  var routes = Picker.filter(function(req, res) {
+    var matched = /coola/.test(req.url);
+    return matched;
+  });
+
+  routes.middleware(function(req, res, next) {
+    setTimeout(function() {
+      req.middlewarePass = "ok";
+      next();
+    }, 500);
+  });
+
+  routes.route(path, function(params, req, res) {
+    res.end(req.middlewarePass);
+  });
+
+  var res = HTTP.get(getPath(path));
   test.equal(res.content, "ok");
 });
 
