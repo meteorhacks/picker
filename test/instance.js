@@ -53,7 +53,7 @@ Tinytest.add('middlewares', function(test) {
     setTimeout(function() {
       req.middlewarePass = "ok";
       next();
-    }, 500);
+    }, 100);
   });
 
   Picker.route(path, function(params, req, res) {
@@ -76,7 +76,7 @@ Tinytest.add('middlewares - with filtered routes', function(test) {
     setTimeout(function() {
       req.middlewarePass = "ok";
       next();
-    }, 500);
+    }, 100);
   });
 
   routes.route(path, function(params, req, res) {
