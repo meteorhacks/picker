@@ -53,8 +53,14 @@ You can create any amount of sub routes with this `filter` API. Same time, you c
 You can use existing `connect` and `express` middlewares without any issues.
 
 ~~~js
-var bodyParser = Meteor.npmRequire('body-parser'); // using meteorhacks:npm package
-Picker.middleware(bodyParser());
+// You can use the meteorhacks:npm package to load in the body-parser package
+// via NPM.
+var bodyParser = Meteor.npmRequire( 'body-parser');
+
+// Add two middleware calls. The first attempting to parse the request body as
+// JSON data and the second as URL encoded data.
+Picker.middleware( bodyParser.json() );
+Picker.middleware( bodyParser.urlencoded( { extended: false } ) );
 ~~~
 
 You can use middlewares on sub routes as well.
