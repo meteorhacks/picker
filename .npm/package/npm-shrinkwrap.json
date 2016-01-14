@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "path-to-regexp": {
+      "version": "1.0.1"
+    }
+  }
+}
