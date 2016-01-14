@@ -6,7 +6,7 @@ Package.describe({
 });
 
 Npm.depends({
-  'path-to-regexp': '1.0.1'
+  'path-to-regexp': '1.2.1'
 });
 
 Package.onUse(function(api) {
