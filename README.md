@@ -23,7 +23,7 @@ Picker.route('/post/:_id', function(params, req, res, next) {
 
  * You can use Meteor APIs inside this callback (runs inside a Fiber)
  * Route definitions are very similar to Iron Router and Express
- * `req` is an instance of NodeJS [http.IncomingMessage](http://nodejs.org/api/http.html#http_http_incomingmessage)
+ * `req` is an instance of NodeJS [http.IncomingMessage](http://nodejs.org/api/http.html#http_class_http_incomingmessage)
  * `res` is an instance of NodeJS [http.ServerResponse](http://nodejs.org/api/http.html#http_class_http_serverresponse)
  * `next` is optional and call it, if you don't need to handle the current request
 
