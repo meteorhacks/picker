@@ -55,7 +55,7 @@ You can use existing `connect` and `express` middlewares without any issues.
 ~~~js
 // You can use the meteorhacks:npm package to load in the body-parser package
 // via NPM.
-var bodyParser = Meteor.npmRequire( 'body-parser');
+var bodyParser = require( 'body-parser');
 
 // Add two middleware calls. The first attempting to parse the request body as
 // JSON data and the second as URL encoded data.
